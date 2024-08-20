@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1">
+   <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body >
+
+  <div class="kotak"></div>
+<div class="container " >
+  <div id="myModal" class="modal"> </div>
+  <nav>
+    
+    <div class="openbtn">  
+        <span class="openbtn-item" style="font-size:30px;cursor:pointer">&#9776;</span>
+    </div> 
+
+    <div class="logo">
+      <img src="images/logo.svg" alt="sneakers" >
+    </div>
+
+    
+    <div class="menu ">
+
+      <ul>
+        <li class="tutup">
+          <a href="javascript:void(0)"  style="text-decoration: none ; color: black" >&times;
+          </a>
+        </li> 
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+      </ul>
+    </div>
+
+    <div class="icon">
+      <div class="cart-container">
+        <span class="notification"></span>
+        <button class="cart-btn">
+          <img src="images/icon-cart.svg" alt="cart" class="cart">    
+        </button>
+        <div class="cart-wrp invisible">
+          <p class="cart-heading">Cart</p>
+          <div class="divider"></div>
+          <div class="cart-content empty">
+            <p>Your Cart Is Empty</p>
+          </div>
+        </div>        
+      </div>
+
+      <img id="avatar" src="images/image-avatar.png" width="50" height="50" style="border-color: orange">
+    </div>
+  
+  </nav>
+  <div class="line"></div>
+
+  <div class="content">
+    
+    <div class="picture">
+        <img src="images/image-product-1.jpg" alt="image-product-1" >
+        <div class="thumbnails">
+          <img src="images/image-product-1-thumbnail.jpg" alt="thumbnail-1"onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail-2"onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail-3"onclick="openModal();currentSlide(3)"class="hover-shadow cursor">
+          <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail-4"onclick="openModal();currentSlide(4)"class="hover-shadow cursor">
+        </div>
+    </div>
+
+<!-- slide show -->
+    
+    <div id="myModal" class="modal"> </div>
+
+        <div id="myContentModal"class="contentmodal">
+          
+          <div class="btnclose">
+            <span class="close cursor" onclick="closeModal()">&times;</span> 
+          </div>
+
+          <div class="modal-content">  
+            <div class="mySlides">
+              <img src="images/image-product-1.jpg" alt="image-product-1" style="border-radius: 11px;">
+            </div>
+            <div class="mySlides">
+              <img src="images/image-product-2.jpg" alt="image-product-2" style="border-radius: 11px;">
+            </div>
+            <div class="mySlides">
+              <img src="images/image-product-3.jpg" alt="image-product-3" style="border-radius: 11px;">
+            </div>
+            <div class="mySlides">
+              <img src="images/image-product-4.jpg" alt="image-product-4" style="border-radius: 11px; ">
+            </div>
+
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <div class="thumbnailsmodel">
+              <img src="images/image-product-1-thumbnail.jpg" alt="thumbnail-1"onclick="currentSlide(1)">
+              <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail-2"onclick="currentSlide(2)">
+              <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail-3"onclick="currentSlide(3)">
+              <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail-4"onclick="currentSlide(4)">
+          </div>
+        </div>
+        
+  <!-- slide show -->  
+
+    <div class="company">
+      <p class="" style="color:hsl(26, 100%, 55%);">SNEAKER COMPANY</p>
+      <br>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <br>
+      <p class="textCompany">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+      <div class="price">
+        <h3 class="price-1">$125.00</h3>
+        <h5 class="discount">50%</h5>
+        <h5 class="price-2">$250.00</h5>
+      </div>
+
+      <div class="cart">
+        <div class="counter">
+          <img src="images/icon-minus.svg" alt="minus" class="minus">
+          <p id="display">0</p>
+          <img src="images/icon-plus.svg" alt="plus" class="plus">
+        </div>
+
+        <button class="addtocart"> 
+            <img src="images/icon-cart.svg">
+            <p>Add to cart</p>
+        </button>
+
+        <button class="addtocartMobile"> 
+            <img src="images/icon-cart.svg">
+            <p>Add to cart</p>
+        </button>
+
+        <button class="addtocartMobile1"> 
+            <img src="images/icon-cart.svg">
+            <p>Add to cart</p>
+        </button>  
+    
+      </div>
+      
+    </div>
+
+  </div>
+</div>  
+  
+  <div class="footer">
+    <div class="attribution" style="margin-top:30px;margin-bottom: 90px">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Captain Usopp</a>.
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
